@@ -1,0 +1,18 @@
+import React, { Fragment } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Home } from '../Views'
+import TopBar from '../Components/TopBar'
+
+
+export default function() {
+    return (
+        <Fragment>
+            <TopBar />
+            <Router>
+                <Switch>
+                    <Route exact component={Home} />
+                </Switch>
+            </Router>
+        </Fragment>
+    )
+}
