@@ -3,6 +3,7 @@ import React, { FC, useState, useEffect, Fragment } from 'react'
 import { StyledDiv } from './styled'
 import axios from 'axios'
 import PokeIcon from '../../Components/PokeIcon'
+import Pokemon from  '../Pokemon'
 
 const Home: FC = () => {
     const offset = 20
@@ -58,7 +59,10 @@ const Home: FC = () => {
             <div className="home-container">
                 {
                     Boolean(selectedPokemon) ? (
-                        <h1>pokemon selected</h1>
+                        <Pokemon
+                            back={() => setSelectedPokemon(null)}
+                            data={selectedPokemon}
+                        />
                     ) : (
                             <Fragment>
                                 <div className="home-pokemon-list">
