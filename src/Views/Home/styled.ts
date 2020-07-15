@@ -4,7 +4,7 @@ import BackgroundImage from '../../assets/images/background.png'
 export const StyledDiv = styled.div`
     background-image: url(${BackgroundImage});
     padding: 40px;
-    display: 1;
+    flex: 1;
 
     .home-container {
         padding: 20px;
